@@ -1,5 +1,52 @@
-\title{Cosmological Transients from LSST: Rapid Response with UV, Optical, and NIR Follow-Up}
+\title{The Potential of Space-Based 0.45--4.5~$\mu$m Observatories for Type Ia Supernova Cosmology}
 
+%% WFIRST, Euclid, but plus a push to go to observer frame 1.8 um * (1+1.5) = 4.5 um
+\section{Restframe UV-optical-NIR Observations from $0.01<z<1.5$}
+
+The focus here is on emphasizing the rest-frame {\em NIR} in addition to using observer frame NIR to get the optical.
+
+Challenges.  We don't have yet a good set of templates for SNeIa in the NIR.
+
+\subsection{Review of Available Data}
+Let's step through the traditional filter bandpasses to review the key features of each wavelength and the benefits from including that color coverage.
+
+Optical B and V band observations are the most standard and most easily described with the traditional width-luminosity stretch\footnote{While ``stretch'' can very specifically to a particular parameterization, i.e., \citet{Goldhaber02}, we here use it in a more general sense to describe the key feature of the variation in the width and luminosity of \snia lightcurves.  Any more detailed discussion involving differences between $s$, $s_{BV}$, $\Delta m_{15}$, $x_1$, etc. will specifically define and use the specific notation.} relationship.  $r$ and $i$ show more variation, with the presence of a clear secondary bump for higher-stretch supernova.  $y$ has been historically difficult because of the variation of the Earth's atmosphere, the growing sky brightness, and the historical limits of the prior generation CCD-based detectors to be very insensitive in that wavelength range.  The Carnegie Supernova Project (I, II, and potentially III) has been producing the most thorough set of $y$-band \snia lightcurves.
+
+The near-infrared -- specifically $J$ (1.10-1.35), $H$ (1.5--1.8), and $K_s$ (2.0--2.4) -- has been a focus of effort over the past decade with the CSP \citep{Contreras11, Krisciunas17, } the Center for Astrophysics SN Group \citep{Wood-Vasey08,Friedman15}, the RAISIN {\it HST} program (PI: Robert Kirshner), and the SweetSpot survey \citep{Weyant14, Weyant17}.
+
+{\tbd Show figure of filters referenced and sample \snia SEDs across these filters.}
+
+The Nearby Supernova Factory is doing interesting things with spectral time series.  But these are limited to 0.32-1.0~$\mu$m.  
+E.g., the SNEMO \citep{Saunders18} is a solid effort from a very rich data set, but is limited to strictly the rest-frame optical ($0.33$--$.86$~$\mu$m).
+
+To extend to the NIR, Eric Hsiao is working on reducing the largest collection existing collection of NIR SNIa spectra (gathered by Hsiao, Howie Marion, and other members of the Harvard and CSP teams).
+{\tbd Invite Eric Hsiao to join?}
+
+The Swift \snia observations are providing the richest set of NUV observations \citep{Brown??}.
+
+\sneia are significantly variable the near-UV, and extending down to $u$-band \citep[cf][]{Jha??, Brown}.  Observations in this part of the spectrum may provide significant information about the variation between \sneia and their environments.  However, they are not directly the source of the most standard brightness of \sneia.
+
+The Open Supernova Catalog \citep{Guillochon17} is a fabulously convenient place to organize and retrieve these data.
+
+{\tbd Show figure of eavailable phtoometric, spectroscopic observations based on OSC?}
+
+{\tbd How do we add SNCosmo predictions for the NIR?}
+
+
+{\tbd Summarize Astier et al. Euclid paper}
+{\tbd Mention Scolnic, Perlmutter, et al. white paper}
+
+\subsection{Need for Additional Data}
+
+We need to be able to generate full time-dependent SEDs across at least two parameters of variation (e.g., stretch and color) from restframe 0.3--2.5~$\mu$m.  If we wanted to fully follow the direction that SNEMO has taken with the SNFactory data, one could imagine wanted to sample across the 7-parameter or even 15-parameter spaces defined by the SNEMO eigenvectors.  However, brief arithmetic will reveal the infeasibility of this plan.  Even just a 10-point sampling of each dimesion would require observations of $10^{15}$ \sneia.  At an estimated rate of XYZ \snia/Mpc^{3}, there are ZZZ \sneia at $z<0.1$ in a 10-year period.
+
+The Plan
+\begin{enumerate}
+    \item Gather ground-based $z<0.02$ full SEDs of \sneia.  E.g., the very closest observation of SN~2011fe and SN~2014J provided a very rich dataset.  But we likely need 100 of these.
+    \item Gather ground-based $0.02<z<0.1$ full SEDs of \sneia.  These will be lower S/N for the same telescope resources, but these redshifts will provide perfect sweet spot of being able to estimate distances {\em better} than we can for $z<0.02$ \sneia where peculiar velocities contribute so much.
+\end{enumerate}
+
+%% TSO
 \section{Type Ia Supernova Progenitors and Cosmology with Rapid UV-Optical-NIR Followup}
 
 LSST will obtain good lightcurves for 100,000~SNeIa over 10 years.  These will allow for measurements of the expansion of the Universe out to z~0.8 based on restframe optical observations.  Achieving the most accurate and precise constraints on dark energy will require improved understanding of SN~Ia behavior across cosmic time and robust, well-calibrated luminosity distances using both restframe optical+infrared.
@@ -29,6 +76,12 @@ If observed within hours on a short time scale, the light from the explosion can
 \end{itemize}
 
 The most boring answer of ``nothing'' would indicate that the progenitor system was very compact, likely from two degenerate objects.  
+
+\subsubsection{Current Limits from K2, ASASSN Supernovae}
+
+{\tbd Quote and describe the current work with early-time lightcurves from K2, ASASSN}
+
+{\tbd If something comes out of ZTF, add that here.}
 
 \subsubsection{Bolometric SED: All the photons, All the energy, All the elements}
 The amount of Ni$^{56}$ produced in a SN~Ia explosion is a fundamental prediction of the SN~Ia explosion models, while the elements produced reveal the details of the explosion dynamics, in particular the transition from a deflagration to a detonation in the propagation of the nuclear burning front.
