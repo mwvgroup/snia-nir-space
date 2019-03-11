@@ -1,93 +1,155 @@
-\documentclass{aastex}
+%%% General Astro 2020 Template Header
+% http://sites.nationalacademies.org/cs/groups/ssbsite/documents/webpage/ssb_190975.tex
+% http://surveygizmolibrary.s3.amazonaws.com/library/623127/Astro2020WPinstructionsupdated2.pdf
+\documentclass[12pt,preprint]{aastex}
+\usepackage{times}
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=1in}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem,amssymb}
+\usepackage{ragged2e}
+\newlist{thematic}{itemize}{8}
+\setlist[thematic]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfi}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+%%%
 
+%%% Paper-specific commands
 \usepackage{graphicx}   % need for figures
 \usepackage{color}
 \usepackage{verbatim}
 \graphicspath{{figures/}}
 \usepackage{bm}
+\usepackage{xspace}
 \newcommand{\Ks}{{\ensuremath K_s}}
 \newcommand{\JHKs}{{\ensuremath JH$K_s$}}
-\newcommand{\snia}{SN~Ia}
-\newcommand{\sneia}{SNe~Ia}
+\newcommand{\snia}{SN~Ia\xspace}
+\newcommand{\sneia}{SNe~Ia\xspace}
 
 \newcommand{\tbd}{{\color{red}}}
+\usepackage{hyperref}
 
+% %%% Copied from AASTeX Class
+% \newcommand\arcdeg{\mbox{$^\circ$}}%
+% \newcommand\arcmin{\mbox{$^\prime$}}%
+% \newcommand\arcsec{\mbox{$^{\prime\prime}$}}%
+% \def\eps@scaling{1.0}%
+% \newcommand\epsscale[1]{\gdef\eps@scaling{#1}}%
+% \newcommand\plotone[1]{%
+%  \typeout{Plotone included the file #1}
+%  \centering
+%  \leavevmode
+%  \includegraphics[width={\eps@scaling\columnwidth}]{#1}%
+% }%
+% \newcommand\plottwo[2]{{%
+%  \typeout{Plottwo included the files #1 #2}
+%  \centering
+%  \leavevmode
+%  \columnwidth=.45\columnwidth
+%  \includegraphics[width={\eps@scaling\columnwidth}]{#1}%
+%  \hfil
+%  \includegraphics[width={\eps@scaling\columnwidth}]{#2}%
+% }}%
+% %%%
 
 \begin{document}
+\raggedright
+\huge
+Astro2020 Science White Paper \linebreak
 
-\title{The Potential of Space-Based Optical+NIR ($0.3<\lambda<4.5$~$\mu$m) Observatories for Type Ia Supernova Cosmology}
-\author{W.~M. Wood-Vasey}
-\affil{
-Pittsburgh Particle Physics, Astrophysics, and Cosmology Center (PITT PACC).
-Physics and Astronomy Department, University of Pittsburgh,
-Pittsburgh, PA 15260, USA
-}
+The Potential of Space-Based Optical+NIR ($0.3<\lambda<4.5$~$\mu$m) Observatories for Type Ia Supernova Cosmology \linebreak
+\normalsize
 
-\begin{abstract}
-    Comprehensive rest-frame near-infrared measurements of Type Ia supernovae (\sneia) offer unique and compelling opportunities to advance our understanding of dark energy and dark matter using cosmological measurements with Type Ia supernovae.  Such observations also have significant potential to improve our knowledge about these explosions themselves including clues to their progenitor systems.
-    Spaced-based observatories of 1--2.5 meter aperture with imaging and spectroscopic instruments covering 1--4.5$~\mu$m offer significant opportunities not available from the ground, particularly in pursuit of high-quality, well-calibrated observations of Type Ia supernovae from 0.1<z<1.5.  Observatories with fast response times -- on the order of minutes -- may be our best hope of determine the progenitor systems for \sneia.  Measuring such progenitor clues consistently from $0.05<z<1.5$ will allow us to measure any population drift in the progenitor population of Type Ia supernovae and provide an independent source of a population distribution function to compare against the traditionaly luminosity-derived population measurements from Hubble-Diagram based explorations of population distributions.
-\end{abstract}
+\noindent \textbf{Thematic Areas:} \hspace*{60pt} $\square$ Planetary Systems \hspace*{10pt} $\square$ Star and Planet Formation \hspace*{20pt}\linebreak
+$\done$ Formation and Evolution of Compact Objects \hspace*{31pt} $\done$ Cosmology and Fundamental Physics \linebreak
+  $\square$  Stars and Stellar Evolution \hspace*{1pt}    $\square$ Resolved Stellar Populations and their Environments \hspace*{40pt} \linebreak
+  $\square$    Galaxy Evolution   \hspace*{45pt}    $\square$ Multi-Messenger Astronomy and Astrophysics \hspace*{65pt} \linebreak
+
+\textbf{Principal Author:}
+
+Name: W. M. Wood-Vasey
+ \linebreak
+Institution: University of Pittsburgh
+ \linebreak
+Email: wmwv@pitt.edu
+ \linebreak
+Phone: (412) 624-9000
+ \linebreak
+
+\textbf{Co-authors:} (names and institutions)
+  \linebreak
+
+\textbf{Abstract  (optional):}
+    Comprehensive rest-frame optical through near-infrared measurements ($0.3$--$4.5$~$\mu$m) of Type Ia supernovae (\sneia) offer unique and compelling opportunities to advance our understanding of the relationship between dark energy and dark matter and of \sneia themselves.
+    Space-based 1--2.5~m class observatories with imaging and spectroscopic instruments covering 0.3--4.5~$\mu$m offer significant opportunities not available from the ground, particularly in pursuit of high-quality, well-calibrated observations of Type Ia supernovae from $0.1<z<1.5$.  Observatories with fast response times -- on the order of minutes -- may be our best hope of determine the progenitor systems for \sneia, and observatories with low observation overhead are critical to observing thousands of transients.  Measuring progenitor clues consistently from $0.05<z<1.5$ will allow us to measure population drift in the progenitor population of \sneia and provide an independent source of a population distribution function to improve and understand the luminosity dispersion in the \snia Hubble diagrams used to measure the evolution of dark energy and dark matter over cosmic time.  {\it Euclid} and {\it WFIRST} have the wide-field NIR capability but will primarily measure rest-frame optical in the observer-frame NIR ($\sim2$~$\mu$m). {\it JWST}.  We here focus on the unique potential of the proposed Time-domain Spectroscopic Observatory ({\it TSO}) to observe from $0.3$--$4.5$~$\mu$m with both imaging and spectroscopic capabilities.
+
+
+\pagebreak
 
 %% WFIRST, Euclid, but plus a push to go to observer frame 1.8 um * (1+1.5) = 4.5 um
 \section{Restframe UV-optical-NIR Observations from $0.01<z<1.5$}
 
-The focus here is on emphasizing the rest-frame {\em NIR} in addition to using observer-frame NIR to get the optical.
+Type Ia supernova continue to be a key part of our overall efforts to measure dark energy and dark matter through the cosmic evolution of the Universe.  We are scaling up from the 1,000 \sneia of current measurements to 10,000 from the Dark Energy Survey and Pan-STARRS, to 100,000 of the next decade from LSST.  The are planned missions to provide the capability to explore restframe optical lightcurves of \sneia at higher-redshifts, most notably {\it WFIRST}~\citep{Spergel15,Hounsell18} and potentially {\it Euclid}~\citep{Astier14}.  These missions will substantially advance our understanding of dark energy through \snia luminosity distances.  However, they (1) do not fully take advantage of the improve standard luminosity of \sneia in the near-infrared and (2) are unlikely to improve our understanding of the \snia themselves, leaving the field continually worried about astrophysical evolution in the population(s) of \sneia.
 
-Challenges.  We don't have yet a good set of templates for SNeIa in the NIR.
+There is a related Astro2020 white paper on the future of supernova cosmology led by Saul Perlmutter and Dan Scolnic.  This present paper is focused on the aspects uniquely enabled by consistent coverage from 0.3--4.5~$\mu$m.
 
-
+We specifically argue here for a program to observe \sneia from restframe optical to NIR from $0.01<z<1.5$ to provide nearly bolometrically-complete observations over 10 Gyr of cosmic history from the first hints of dark energy, to our current epoch of accelerated expansion, and that we can studying the host environments of these important cosmic probes.  Obtaining restframe observations from 0.3--1.8~$\mu$m will require observer-frame measurements from 0.3--4.5~$\mu$m.
+  Such observations also have significant potential to improve our knowledge about the progenitor systems of these explosions.
 
 \subsection{Review of Available Data}
-Let's step through the traditional filter bandpasses to review the key features of each wavelength and the benefits from including that color coverage.
+Here we review the traditional filter bandpasses to review the key features of each wavelength and the benefits from including coverage in that band.
 
-Optical B and V band observations are the most standard and most easily described with the traditional width-luminosity stretch\footnote{While ``stretch'' can very specifically to a particular parameterization, i.e., \citet{Goldhaber01}, we here use it in a more general sense to describe the key feature of the variation in the width and luminosity of \snia lightcurves.  Any more detailed discussion involving differences between $s$, $s_{BV}$, $\Delta m_{15}$, $x_1$, etc. will specifically define and use the specific notation.} relationship.  $r$ and $i$ show more variation, with the presence of a clear secondary bump for higher-stretch supernova.  $y$ has been historically difficult because of the variation of the Earth's atmosphere, the growing sky brightness, and the historical limits of the prior generation CCD-based detectors to be very insensitive in that wavelength range.  The Carnegie Supernova Project (I, II, and potentially III) has been producing the most thorough set of $y$-band \snia lightcurves.
+Optical B and V band observations are the most standard and most easily described with the traditional width-luminosity stretch\footnote{While ``stretch'' can very specifically to a particular parameterization, i.e., \citet{Goldhaber01}, we here use it in a more general sense to describe the key feature of the variation in the width and luminosity of \snia lightcurves.  Any more detailed discussion involving differences between $s$, $s_{BV}$, $\Delta m_{15}$, $x_1$, etc. will specifically define and use the specific notation.} relationship.  $r$ and $i$ show more variation, with the presence of a clear secondary bump for higher-stretch supernova.  $y$ has been historically difficult because of the variation of the Earth's atmosphere, the growing sky brightness, and the historical limits of the prior generation CCD-based detectors to be very insensitive in that wavelength range.  The Carnegie Supernova Project (I, II, and future III) has been producing the most thorough set of $y$-band \snia lightcurves.
 
-The near-infrared -- specifically $J$ (1.10-1.35), $H$ (1.5--1.8), and $K_s$ (2.0--2.4) -- has been a focus of effort over the past decade with the CSP \citep{Contreras10, Krisciunas17, } the Center for Astrophysics SN Group \citep{Wood-Vasey08,Friedman15}, the RAISIN {\it HST} program (PI: Robert Kirshner), and the SweetSpot survey \citep{Weyant14, Weyant18}.
+The near-infrared -- specifically $J$ (1.10--1.35), $H$ (1.5--1.8), and $K_s$ (2.0--2.4) -- has been a focus of effort over the past decade with the CSP~\citep{Contreras10, Krisciunas17} the Center for Astrophysics SN Group~\citep{Wood-Vasey08, Friedman15}, the RAISIN {\it HST} program (PI: Robert Kirshner), and the SweetSpot survey~\citep{Weyant14, Weyant18}.  These observations have been complemented by extensive efforts to obtain NIR spectra.
 
-{\tbd Show figure of filters referenced and sample \snia SEDs across these filters.}
+% Challenges.  We don't have yet a good set of templates for SNeIa in the NIR.
 
-The Nearby Supernova Factory is doing interesting things with spectral time series.  But these are limited to 0.32-1.0~$\mu$m.  
-E.g., the SNEMO \citep{Saunders18} is a solid effort from a very rich data set, but is limited to strictly the rest-frame optical ($0.33$--$.86$~$\mu$m).
+The Nearby Supernova Factory~\citep{Aldering02} is doing very interesting things with spectral time series.  But these are limited to 0.32-1.0~$\mu$m.  E.g., the SNEMO~\citep{Saunders18} is a solid effort from a very rich data set, but is limited to strictly the rest-frame optical ($0.33$--$.86$~$\mu$m).  To extend to the NIR, Eric Hsiao is working on reducing the largest collection existing collection of NIR SNIa spectra (gathered by Hsiao, Howie Marion, and other members of the Harvard and CSP teams).
+% {\tbd Invite Eric Hsiao to join?}
 
-To extend to the NIR, Eric Hsiao is working on reducing the largest collection existing collection of NIR SNIa spectra (gathered by Hsiao, Howie Marion, and other members of the Harvard and CSP teams).
-{\tbd Invite Eric Hsiao to join?}
+The Swift \snia observations are providing the richest set of NUV observations~\citep{Brown09, Milne10}.
+\sneia are significantly variable the near-UV, and extending down to $u$-band~\citep{Jha06, Brown10}.  Observations in this part of the spectrum may provide significant information about the variation between \sneia and their environments.  However, they are not directly the source of the most standard brightness of \sneia.
 
-The Swift \snia observations are providing the richest set of NUV observations \citep{Brown??}.
+The Open Supernova Catalog~\citep{Guillochon17} is a fabulously convenient place to organize and retrieve these data.
 
-\sneia are significantly variable the near-UV, and extending down to $u$-band \citep[cf][]{Jha??, Brown??}.  Observations in this part of the spectrum may provide significant information about the variation between \sneia and their environments.  However, they are not directly the source of the most standard brightness of \sneia.
+% {\tbd Show figure of available photometric, spectroscopic observations based on OSC?}
+% {\tbd How do we add SNCosmo predictions for the NIR?}
 
-The Open Supernova Catalog \citep{Guillochon17} is a fabulously convenient place to organize and retrieve these data.
+% {\tbd Show figure of filters referenced and sample \snia SEDs across these filters.}
+\begin{figure}
+\plotone{SNIa_phases_restframe}
+\plotone{SNIa_at_max_over_redshift}
+\caption{
+    (top) Type Ia supernova spectrum at phase=[-10, 0, +10, +20] days, shown with UV, optical, and NIR filters.
+    (bottom) Above spectrum redshift to z=0.2, 0.5, 1.0, and 1.5.
+}
+\end{figure}
 
-{\tbd Show figure of available photometric, spectroscopic observations based on OSC?}
-
-{\tbd How do we add SNCosmo predictions for the NIR?}
-
-
-{\tbd Summarize Astier et al. Euclid paper}
-{\tbd Mention Scolnic, Perlmutter, et al. white paper}
-
-There is a related white paper on the future of supernova cosmology being submitted for the ASTRO 2020 process.  That paper is led by Saul Perlmutter and Dan Scolnic.  This present paper is focused on the aspects uniquely enabled by NIR coverage out to 4.5~$\mu$m.
-
+\iffalse
 \subsection{Need for Additional Data}
 
-We need to be able to generate full time-dependent SEDs across at least two parameters of variation (e.g., stretch and color) from restframe 0.3--2.5~$\mu$m.  If we wanted to fully follow the direction that SNEMO has taken with the SNFactory data, one could imagine wanted to sample across the 7-parameter or even 15-parameter spaces defined by the SNEMO eigenvectors.  However, brief arithmetic will reveal the infeasibility of this plan.  Even just a 10-point sampling of each dimesion would require observations of $10^{15}$ \sneia.  At an estimated rate of XYZ \snia/Mpc$^{3}$, there are ZZZ \sneia at $z<0.1$ in a 10-year period.
+We need to be able to generate full time-dependent SEDs across at least two parameters of variation (e.g., stretch and color) from restframe 0.3--2.5~$\mu$m.  If we wanted to fully follow the direction that SNEMO has taken with the SNFactory data, one could imagine wanted to sample across the 7-parameter or even 15-parameter spaces defined by the SNEMO eigenvectors.  However, brief arithmetic will reveal the infeasibility of this plan.  Even just a 10-point sampling of each dimesion would require observations of $10^{15}$ \sneia.  At an estimated rate of $3.5\times10^{-5}$~\snia/Mpc$^{3}$, there are only $\sim100,000$ \sneia at $z<0.1$ in a 10-year period.
 
 The Plan
 \begin{enumerate}
     \item Gather ground-based $z<0.02$ full SEDs of \sneia.  E.g., the very closest observation of SN~2011fe and SN~2014J provided a very rich dataset.  But we likely need 100 of these.
     \item Gather ground-based $0.02<z<0.1$ full SEDs of \sneia.  These will be lower S/N for the same telescope resources, but these redshifts will provide perfect sweet spot of being able to estimate distances {\em better} than we can for $z<0.02$ \sneia where peculiar velocities contribute so much.
 \end{enumerate}
+\fi
 
 %% TSO
 \section{Type Ia Supernova Progenitors and Cosmology with Rapid UV-Optical-NIR Followup}
 
 LSST will obtain good lightcurves for 100,000~SNeIa over 10 years.  These will allow for measurements of the expansion of the Universe out to z~0.8 based on restframe optical observations.  Achieving the most accurate and precise constraints on dark energy will require improved understanding of SN~Ia behavior across cosmic time and robust, well-calibrated luminosity distances using both restframe optical+infrared.
 
-\subsection{SN~Ia Cosmology}
+Type Ia supernovae are intrinsically less variable in the restframe NIR, in particular through $H$-band ($1.5--1.8$~$\mu$)~\citep{Krisciunas04a, Krisciunas04b, Krisciunas04c, Wood-Vasey08, Contreras10, Stritzinger11, Kattner12} and suffer less uncertainty due to the effects of dust in their host galaxy and our own Milky Way.
 
-Type Ia supernovae are intrinsically less variable in the restframe NIR, in particular through $H$-band ($1.5--1.8$~$\mu$) \citep{Krisciunas, Wood-Vasey, CSP} and suffer less uncertainty due to the effects of dust in their host galaxy and our own Milky Way.
-
-Photometric calibration remains a key limitation in supernova cosmology\citep[c.f.][]{Scolnic}.  Achieving consistent relative calibration from the optical through to the NIR to 2\% will be key to making accurate and precise measurements of luminosity distance that will allow for the measurement of the equation of state parameter of dark energy, $\omega$, and any potential variation with redshift.  Close coordination between LSST and spaced-based observations both in observed samples of supernova and calibration of their overall systems is vital toward maximizing the science potential of SN~Ia cosmology in the decade to come. 
+Photometric calibration remains a key limitation in supernova cosmology~\citep{Scolnic18}.  Achieving consistent relative calibration from the optical through to the NIR to 2\% will be key to making accurate and precise measurements of luminosity distance that will allow for the measurement of the equation of state parameter of dark energy, $\omega$, and any potential variation with redshift.  Close coordination between LSST and spaced-based observations both in observed samples of supernova and calibration of their overall systems is vital toward maximizing the science potential of SN~Ia cosmology in the decade to come. 
 
 \citet{Astier14} presented a clear case for joint LSST+Euclid observations.  We here argue for the addition of spectroscopic observations as (i) key indicators of SN~Ia populations and potential variation, and (ii) an increase in wavelength coverage to $\lambda\sim4\mu$m to allow for rest-frame H-band observations.
 
@@ -99,7 +161,7 @@ While spectra offer a wealth of information on the stellar populations and the i
 
 \subsection{SN~Ia Progenitor Systems}
 
-The lack of knowledge about SN~Ia progenitor systems casts a shadow over treating SNeIa as standardizable across 8~Gyr ($z\sim1$) of cosmic history.  Efforts to identify progenitor systems for detected SNeIa have so far come up with nothing, and very constraining limits in the case of the two closest SNeIa of the past decade (?) SN~2011fe \citep{??} and SN~2014J \citep{??} strongly suggest we may never independently observe a progenitor system.
+The lack of knowledge about SN~Ia progenitor systems casts a shadow over treating SNeIa as standardizable across 8~Gyr ($z\sim1$) of cosmic history.  Efforts to identify progenitor systems for detected SNeIa have so far come up with nothing, and very constraining limits in the case of the two closest SNeIa of the past decade (?) SN~2011fe \citep{Li11} and SN~2014J \citep{Nielsen14, Perez-Torres14, Goobar15, Sand16, Graur19} strongly suggest we may never independently observe a progenitor system.
 
 Two key avenues for understanding progenitor systems are 
 (i) obtaining specific data from the explosion from very early-time measurements (starting at <1 hour) that illuminates the system.
@@ -115,42 +177,68 @@ If observed within hours on a short time scale, the light from the explosion can
 
 The most boring answer of ``nothing'' would indicate that the progenitor system was very compact, likely from two degenerate objects.  
 
+\iffalse
 \subsection{Current Limits from K2, ASASSN Supernovae}
 
 {\tbd Quote and describe the current work with early-time lightcurves from K2, ASASSN}
 
 {\tbd If something comes out of ZTF, add that here.}
+\fi
 
 \subsection{Bolometric SED: All the photons, All the energy, All the elements}
 The amount of Ni$^{56}$ produced in a SN~Ia explosion is a fundamental prediction of the SN~Ia explosion models, while the elements produced reveal the details of the explosion dynamics, in particular the transition from a deflagration to a detonation in the propagation of the nuclear burning front.
 
 SN~Ia emission is line-blanketed through the expanding photosphere so severely that there's no significant emission blueward of the UV.  At least 95\% (?) of the flux comes out between the UV and 5~$\mu$m.  A bolometric SED from $0.3\mu$m$--5.0\mu$m thus captures almost all of the EM emission giving a full accounting of both the energetic and elemental signatures.
 
-\section{Figures}
 
-\begin{figure}
-\plotone{SNIa_phases_restframe}
-\plotone{SNIa_at_max_over_redshift}
-\caption{
-    (top) Type Ia supernova spectrum at phase=[-10, 0, +10, +20] days, shown with UV, optical, and NIR filters.
-    (bottom) Above spectrum redshift to z=0.2, 0.5, 1.0, and 1.5.
-}
-\end{figure}
-
-\begin{figure}
+%\begin{figure}
 %\plotone{}
-\caption{Estimate improvement in cosmological measurement due to lower dispersion and lower sensitivity to dust.  }
-\end{figure}
+%\caption{Estimate improvement in cosmological measurement due to lower dispersion and lower sensitivity to dust.  }
+%\end{figure}
+
+%\begin{figure}
+%\plotone{SNIa_progenitor}
+%\caption{Diagram of Type Ia progenitor system and the signals.}
+%\end{figure}
+
+\section{Future Facilities}
+
+{\it Euclid}\footnote{\url{https://www.euclid-ec.org}} is a 1.2-m telescope with a visible imager (a single band from $550<\lambda<900$~nm), and a NIR ($Y$, $J$, $H$) photometric imager.  It will launch in 2022 and operate at L2 for a nominal 6-year mission.  Its basic survey will observe 15,000~$\square\arcdeg$ plus three deep fields totalling 40~$\square\arcdeg$.  It is well-suited to an supernova imaging complement to LSST \citep{Astier14}, but has no spectroscopic capabilities.  \citet{Astier14} explore the potential for a 6-month \snia-focused {\it Euclid} survey to be carried out in coordination with LSST.
+
+
+{\it JWST}\footnote{\url{https://www.jwst.nasa.gov}} is a 6.5-m telescope with a rich instrumentation suite covering $0.7<\lambda<29$~$\mu$m in imaging, spectroscopy, coronograph, and IFU.  With a target launch date of 2021 it will operate at L2 for a 5-year nominal mission.  This is the only mission with the capabilities to go to $4.5$~$\mu$m and can do so both in imaging and spectra.  However, it is really designed to expose for hours after acquisition times of $>20$~minutes; while JWST it will be useful for a limited number of \snia studies, it is particularly poorly suited to rapid-response observations and very inefficient at observations that require less than an hour.
+
+{\it WFIRST}\footnote{\url{https://wfirst.gsfc.nasa.gov}} is a 2.4-m telescope with a wide-field optical+NIR imager ($0.48<\lambda<2.0$~$\mu$m) with slitless spectroscopic capabilities from $0.8<\lambda<1.9$~$\mu$m at $70<R<850$.  It also features a coronagraphic mode including a integral-field spectrograph covering $0.60--0.98$~$\mu$m at $R~70$.  With a target launch data in the mid-2020s it will operate at L2 for a 6-year nominal mission.  It will make significant contributions to \snia cosmology, but is limited to $\sim2$~$\mu$m.
+
+{\it TSO}
+%% Text shared across TSO proposals
+The {\it Time-domain Spectroscopic Observatory} ({\it TSO}; PI J. Grindlay) is a proposed NASA Probe-class 1.3-m space telescope at L2, with imaging and spectroscopy ($R=200, 1800$) in 4 bands ($0.3--5$~$\mu$m) and rapid slew ($\sim$minutes) capability to 90\% of the sky.  See Grindlay {\it et al.} TSO Mission Science White Paper for further details.  The design goal is to achieve imaging SNR of 10-$\sigma$ for a 24.5~mag (AB) object in 300 seconds, and SNR 10-$\sigma$ per spectral resolution element in 4,000 seconds for a 23 mag AB object.  For sources at these limits, {\it TSO} can obtain observations {\bf in the same time as JWST}.  For observations of sources brighter than 22~mag, {\it TSO} is {\bf faster than JWST}.
+
+
+300 seconds reaches 24.5 mag AB in imaging.
+4000 seconds reaches 23 mag AB in IFU at R~200 at 10-$\sigma$ per resolution element.
 
 \begin{figure}
-\plotone{SNIa_progenitor}
-\caption{Diagram of Type Ia progenitor system and the signals.}
+\plotone{SNIa_redshift_TSO_JWST.pdf}
+\caption{{\it TSO} is able to observe \sneia at $SNR\sim10$ in the restframe H-band out to $z\sim1.5$.  Assuming a 1800-sec minimum visit time for JWST, {\it TSO} requires less total time to take images of \sneia than JWST out to $z\sim1.4$.  It can take 
+    \label{fig:tso_jwst}
+}
+
 \end{figure}
+
+
+While we also implictly argue for a rest-frame NIR focus at the $z<0.5$ enabled by {\it WFIRST} and {\it Euclid}, that is not a sufficient redshift reach to understand any departures from dark energy being consistent with a cosmological constant.  {\it TSO} can substantially increase the scientific return of the \snia cosmology programs of both {\it WFIRST} and {\it Euclid} by observing \sneia out to restframe H-band at $z\sim1.5$.
+
+%%% I don't think NEOCam is necessary to discuss here as I can't find the instrument capabilities and it will be pure imaging.
+
+\pagebreak
+\textbf{References}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \input{aastex_journals.tex}
 \bibliographystyle{aasjournal}
 \bibliography{snia_nir_space}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \end{document}
+
