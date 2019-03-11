@@ -1,18 +1,48 @@
+\documentclass{aastex}
+
+\usepackage{graphicx}   % need for figures
+\usepackage{color}
+\usepackage{verbatim}
+\graphicspath{{figures/}}
+\usepackage{bm}
+\newcommand{\Ks}{{\ensuremath K_s}}
+\newcommand{\JHKs}{{\ensuremath JH$K_s$}}
+\newcommand{\snia}{SN~Ia}
+\newcommand{\sneia}{SNe~Ia}
+
+\newcommand{\tbd}{{\color{red}}}
+
+
+\begin{document}
+
 \title{The Potential of Space-Based Optical+NIR ($0.3<\lambda<4.5$~$\mu$m) Observatories for Type Ia Supernova Cosmology}
+\author{W.~M. Wood-Vasey}
+\affil{
+Pittsburgh Particle Physics, Astrophysics, and Cosmology Center (PITT PACC).
+Physics and Astronomy Department, University of Pittsburgh,
+Pittsburgh, PA 15260, USA
+}
+
+\begin{abstract}
+    Comprehensive rest-frame near-infrared measurements of Type Ia supernovae (\sneia) offer unique and compelling opportunities to advance our understanding of dark energy and dark matter using cosmological measurements with Type Ia supernovae.  Such observations also have significant potential to improve our knowledge about these explosions themselves including clues to their progenitor systems.
+    Spaced-based observatories of 1--2.5 meter aperture with imaging and spectroscopic instruments covering 1--4.5$~\mu$m offer significant opportunities not available from the ground, particularly in pursuit of high-quality, well-calibrated observations of Type Ia supernovae from 0.1<z<1.5.  Observatories with fast response times -- on the order of minutes -- may be our best hope of determine the progenitor systems for \sneia.  Measuring such progenitor clues consistently from $0.05<z<1.5$ will allow us to measure any population drift in the progenitor population of Type Ia supernovae and provide an independent source of a population distribution function to compare against the traditionaly luminosity-derived population measurements from Hubble-Diagram based explorations of population distributions.
+\end{abstract}
 
 %% WFIRST, Euclid, but plus a push to go to observer frame 1.8 um * (1+1.5) = 4.5 um
 \section{Restframe UV-optical-NIR Observations from $0.01<z<1.5$}
 
-The focus here is on emphasizing the rest-frame {\em NIR} in addition to using observer frame NIR to get the optical.
+The focus here is on emphasizing the rest-frame {\em NIR} in addition to using observer-frame NIR to get the optical.
 
 Challenges.  We don't have yet a good set of templates for SNeIa in the NIR.
+
+
 
 \subsection{Review of Available Data}
 Let's step through the traditional filter bandpasses to review the key features of each wavelength and the benefits from including that color coverage.
 
-Optical B and V band observations are the most standard and most easily described with the traditional width-luminosity stretch\footnote{While ``stretch'' can very specifically to a particular parameterization, i.e., \citet{Goldhaber02}, we here use it in a more general sense to describe the key feature of the variation in the width and luminosity of \snia lightcurves.  Any more detailed discussion involving differences between $s$, $s_{BV}$, $\Delta m_{15}$, $x_1$, etc. will specifically define and use the specific notation.} relationship.  $r$ and $i$ show more variation, with the presence of a clear secondary bump for higher-stretch supernova.  $y$ has been historically difficult because of the variation of the Earth's atmosphere, the growing sky brightness, and the historical limits of the prior generation CCD-based detectors to be very insensitive in that wavelength range.  The Carnegie Supernova Project (I, II, and potentially III) has been producing the most thorough set of $y$-band \snia lightcurves.
+Optical B and V band observations are the most standard and most easily described with the traditional width-luminosity stretch\footnote{While ``stretch'' can very specifically to a particular parameterization, i.e., \citet{Goldhaber01}, we here use it in a more general sense to describe the key feature of the variation in the width and luminosity of \snia lightcurves.  Any more detailed discussion involving differences between $s$, $s_{BV}$, $\Delta m_{15}$, $x_1$, etc. will specifically define and use the specific notation.} relationship.  $r$ and $i$ show more variation, with the presence of a clear secondary bump for higher-stretch supernova.  $y$ has been historically difficult because of the variation of the Earth's atmosphere, the growing sky brightness, and the historical limits of the prior generation CCD-based detectors to be very insensitive in that wavelength range.  The Carnegie Supernova Project (I, II, and potentially III) has been producing the most thorough set of $y$-band \snia lightcurves.
 
-The near-infrared -- specifically $J$ (1.10-1.35), $H$ (1.5--1.8), and $K_s$ (2.0--2.4) -- has been a focus of effort over the past decade with the CSP \citep{Contreras11, Krisciunas17, } the Center for Astrophysics SN Group \citep{Wood-Vasey08,Friedman15}, the RAISIN {\it HST} program (PI: Robert Kirshner), and the SweetSpot survey \citep{Weyant14, Weyant17}.
+The near-infrared -- specifically $J$ (1.10-1.35), $H$ (1.5--1.8), and $K_s$ (2.0--2.4) -- has been a focus of effort over the past decade with the CSP \citep{Contreras10, Krisciunas17, } the Center for Astrophysics SN Group \citep{Wood-Vasey08,Friedman15}, the RAISIN {\it HST} program (PI: Robert Kirshner), and the SweetSpot survey \citep{Weyant14, Weyant18}.
 
 {\tbd Show figure of filters referenced and sample \snia SEDs across these filters.}
 
@@ -28,7 +58,7 @@ The Swift \snia observations are providing the richest set of NUV observations \
 
 The Open Supernova Catalog \citep{Guillochon17} is a fabulously convenient place to organize and retrieve these data.
 
-{\tbd Show figure of eavailable phtoometric, spectroscopic observations based on OSC?}
+{\tbd Show figure of available photometric, spectroscopic observations based on OSC?}
 
 {\tbd How do we add SNCosmo predictions for the NIR?}
 
@@ -36,9 +66,11 @@ The Open Supernova Catalog \citep{Guillochon17} is a fabulously convenient place
 {\tbd Summarize Astier et al. Euclid paper}
 {\tbd Mention Scolnic, Perlmutter, et al. white paper}
 
+There is a related white paper on the future of supernova cosmology being submitted for the ASTRO 2020 process.  That paper is led by Saul Perlmutter and Dan Scolnic.  This present paper is focused on the aspects uniquely enabled by NIR coverage out to 4.5~$\mu$m.
+
 \subsection{Need for Additional Data}
 
-We need to be able to generate full time-dependent SEDs across at least two parameters of variation (e.g., stretch and color) from restframe 0.3--2.5~$\mu$m.  If we wanted to fully follow the direction that SNEMO has taken with the SNFactory data, one could imagine wanted to sample across the 7-parameter or even 15-parameter spaces defined by the SNEMO eigenvectors.  However, brief arithmetic will reveal the infeasibility of this plan.  Even just a 10-point sampling of each dimesion would require observations of $10^{15}$ \sneia.  At an estimated rate of XYZ \snia/Mpc^{3}, there are ZZZ \sneia at $z<0.1$ in a 10-year period.
+We need to be able to generate full time-dependent SEDs across at least two parameters of variation (e.g., stretch and color) from restframe 0.3--2.5~$\mu$m.  If we wanted to fully follow the direction that SNEMO has taken with the SNFactory data, one could imagine wanted to sample across the 7-parameter or even 15-parameter spaces defined by the SNEMO eigenvectors.  However, brief arithmetic will reveal the infeasibility of this plan.  Even just a 10-point sampling of each dimesion would require observations of $10^{15}$ \sneia.  At an estimated rate of XYZ \snia/Mpc$^{3}$, there are ZZZ \sneia at $z<0.1$ in a 10-year period.
 
 The Plan
 \begin{enumerate}
@@ -53,15 +85,15 @@ LSST will obtain good lightcurves for 100,000~SNeIa over 10 years.  These will a
 
 \subsection{SN~Ia Cosmology}
 
-Type Ia supernovae are intrinsically less variable in the restframe NIR, in particular through $H$-band ($1.5--1.8$~\mu) \citep{Krisciunas, Wood-Vasey, CSP} and suffer less uncertainty due to the effects of dust in their host galaxy and our own Milky Way.
+Type Ia supernovae are intrinsically less variable in the restframe NIR, in particular through $H$-band ($1.5--1.8$~$\mu$) \citep{Krisciunas, Wood-Vasey, CSP} and suffer less uncertainty due to the effects of dust in their host galaxy and our own Milky Way.
 
 Photometric calibration remains a key limitation in supernova cosmology\citep[c.f.][]{Scolnic}.  Achieving consistent relative calibration from the optical through to the NIR to 2\% will be key to making accurate and precise measurements of luminosity distance that will allow for the measurement of the equation of state parameter of dark energy, $\omega$, and any potential variation with redshift.  Close coordination between LSST and spaced-based observations both in observed samples of supernova and calibration of their overall systems is vital toward maximizing the science potential of SN~Ia cosmology in the decade to come. 
 
-\citet{Astier16} presented a clear case for joint LSST+Euclid observations.  We here argue for the addition of spectroscopic observations as (i) key indicators of SN~Ia populations and potential variation, and (ii) an increase in wavelength coverage to $\lambda\sim4\mu$m to allow for rest-frame H-band observations.
+\citet{Astier14} presented a clear case for joint LSST+Euclid observations.  We here argue for the addition of spectroscopic observations as (i) key indicators of SN~Ia populations and potential variation, and (ii) an increase in wavelength coverage to $\lambda\sim4\mu$m to allow for rest-frame H-band observations.
 
 \subsection{Host Galaxies}
 
-Obtaining UV-NIR observations of the host galaxies of SNeIa will provide comprehensive stellar age distributions and allow for targeted.  Resolutions of ~0.1\arcsec as achievable from space will allow for spatially resolved photometric estimation of the stellar age distribution and mass of host galaxies.  At $z\sim1$, \sim0.15\arcsec resolves 0.84~kpc, which is the current scale being probe by nearby host galaxy studies from MaNGA, AMUSING, CALIFA (\tbd add references).
+Obtaining UV-NIR observations of the host galaxies of SNeIa will provide comprehensive stellar age distributions and allow for targeted.  Resolutions of ~0.1\arcsec as achievable from space will allow for spatially resolved photometric estimation of the stellar age distribution and mass of host galaxies.  At $z\sim1$, $\sim0.15$\arcsec resolves 0.84~kpc, which is the current scale being probe by nearby host galaxy studies from MaNGA, AMUSING, CALIFA ({\tbd add references}).
 
 While spectra offer a wealth of information on the stellar populations and the ionized gas in a star-forming galaxy, restframe coverage at 0.3-0.4~$\mu$m and
 
@@ -73,7 +105,7 @@ Two key avenues for understanding progenitor systems are
 (i) obtaining specific data from the explosion from very early-time measurements (starting at <1 hour) that illuminates the system.
 (ii) obtaining a full set of observations in time and wavelength that capture the entirety of the energy from originally created Ni$^{56}$.
 
-\subsubsection{Early-Time Flash Frames of the Progenitor System}
+\subsection{Early-Time Flash Frames of the Progenitor System}
 If observed within hours on a short time scale, the light from the explosion can illuminate key features of the progenitor system.  The three key progenitor system features would be 
 \begin{itemize}
 \item Any accretion disk+stream from a non-degenerate companion onto a degenerate companion.
@@ -83,13 +115,42 @@ If observed within hours on a short time scale, the light from the explosion can
 
 The most boring answer of ``nothing'' would indicate that the progenitor system was very compact, likely from two degenerate objects.  
 
-\subsubsection{Current Limits from K2, ASASSN Supernovae}
+\subsection{Current Limits from K2, ASASSN Supernovae}
 
 {\tbd Quote and describe the current work with early-time lightcurves from K2, ASASSN}
 
 {\tbd If something comes out of ZTF, add that here.}
 
-\subsubsection{Bolometric SED: All the photons, All the energy, All the elements}
+\subsection{Bolometric SED: All the photons, All the energy, All the elements}
 The amount of Ni$^{56}$ produced in a SN~Ia explosion is a fundamental prediction of the SN~Ia explosion models, while the elements produced reveal the details of the explosion dynamics, in particular the transition from a deflagration to a detonation in the propagation of the nuclear burning front.
 
 SN~Ia emission is line-blanketed through the expanding photosphere so severely that there's no significant emission blueward of the UV.  At least 95\% (?) of the flux comes out between the UV and 5~$\mu$m.  A bolometric SED from $0.3\mu$m$--5.0\mu$m thus captures almost all of the EM emission giving a full accounting of both the energetic and elemental signatures.
+
+\section{Figures}
+
+\begin{figure}
+\plotone{SNIa_phases_restframe}
+\plotone{SNIa_at_max_over_redshift}
+\caption{
+    (top) Type Ia supernova spectrum at phase=[-10, 0, +10, +20] days, shown with UV, optical, and NIR filters.
+    (bottom) Above spectrum redshift to z=0.2, 0.5, 1.0, and 1.5.
+}
+\end{figure}
+
+\begin{figure}
+%\plotone{}
+\caption{Estimate improvement in cosmological measurement due to lower dispersion and lower sensitivity to dust.  }
+\end{figure}
+
+\begin{figure}
+\plotone{SNIa_progenitor}
+\caption{Diagram of Type Ia progenitor system and the signals.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{aasjournal}
+\bibliography{snia_nir_space}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
